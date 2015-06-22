@@ -10,7 +10,7 @@ public partial class UserDefinedFunctions
         var bi_N = new BigInteger(N.Value);
 
         var bi_res = (bi_left * bi_right) % (bi_N * bi_N);
-        
+
         return new SqlBinary(bi_res.getBytes());
     }
 }
