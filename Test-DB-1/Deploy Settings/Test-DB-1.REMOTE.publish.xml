@@ -3,8 +3,8 @@
   <PropertyGroup>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseName>Test-DB-1</TargetDatabaseName>
-    <DeployScriptFileName>Test-DB-1.sql</DeployScriptFileName>
-    <TargetConnectionString>Data Source=155.69.145.208;Persist Security Info=True;User ID=sa;Pooling=False</TargetConnectionString>
+    <DeployScriptFileName>DeployScript.sql</DeployScriptFileName>
+    <TargetConnectionString>Data Source=SQL-SRV-1\SQLSRV1;Persist Security Info=True;User ID=sa;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True</TargetConnectionString>
     <ScriptDatabaseOptions>True</ScriptDatabaseOptions>
     <BlockOnPossibleDataLoss>True</BlockOnPossibleDataLoss>
     <DropObjectsNotInSource>True</DropObjectsNotInSource>

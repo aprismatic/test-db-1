@@ -64,11 +64,11 @@
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="Pre-Deploy Scripts\EnableCLRSupport.sql" />
-    <Build Include="Schema\Table1.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Deploy Settings\Test-DB-1.LOCAL.publish.xml" />
     <None Include="Deploy Settings\Test-DB-1.REMOTE.publish.xml" />
+    <None Include="DeployScript.sql" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="BigInteger">
       <HintPath>..\..\BigInteger\BigInteger\bin\Release\BigInteger.dll</HintPath>
+      <IsModelAware>True</IsModelAware>
     </Reference>
   </ItemGroup>
   <ItemGroup>
