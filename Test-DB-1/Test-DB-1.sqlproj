@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -17,12 +17,13 @@
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetLanguage>CS</TargetLanguage>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -66,9 +67,9 @@
     <PreDeploy Include="Pre-Deploy Scripts\EnableCLRSupport.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Deploy Settings\Test-DB-1.LOCAL.publish.xml" />
-    <None Include="Deploy Settings\Test-DB-1.REMOTE.publish.xml" />
+    <None Include="Deploy Settings\Remote.2016.publish.xml" />
     <None Include="DeployScript.sql" />
+    <None Include="Deploy Settings\Remote.2014.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -77,9 +78,19 @@
     <Reference Include="BigInteger">
       <HintPath>..\..\BigInteger\BigInteger\bin\Release\BigInteger.dll</HintPath>
       <IsModelAware>True</IsModelAware>
+      <SqlPermissionSet>SAFE</SqlPermissionSet>
+    </Reference>
+    <Reference Include="PaillierExt.Homomorphism">
+      <HintPath>..\..\PaillierExt\PaillierExt.Homomorphism\bin\Release\PaillierExt.Homomorphism.dll</HintPath>
+      <IsModelAware>True</IsModelAware>
+    </Reference>
+    <Reference Include="ElGamalExt.Homomorphism">
+      <HintPath>..\..\ElGamalExt\ElGamalExt.Homomorphism\bin\Release\ElGamalExt.Homomorphism.dll</HintPath>
+      <IsModelAware>True</IsModelAware>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="UDFs\PaillierAddition.cs" />
+    <Compile Include="UDFs\ElGamalMultiplication.cs" />
   </ItemGroup>
 </Project>
