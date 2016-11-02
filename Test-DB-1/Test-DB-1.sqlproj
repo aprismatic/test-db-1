@@ -70,7 +70,6 @@
   <ItemGroup>
     <None Include="Deploy Settings\Remote.2016.publish.xml" />
     <None Include="DeployScript.sql" />
-    <None Include="Deploy Settings\Remote.2014.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
