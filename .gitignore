@@ -5,6 +5,7 @@
 *.suo
 *.user
 *.sln.docstates
+.vs/
 
 # Build results
 [Dd]ebug/
@@ -56,6 +57,7 @@ dlldata.c
 *.pidb
 *.svclog
 *.scc
+*.jfm
 
 # Chutzpah Test files
 _Chutzpah*
