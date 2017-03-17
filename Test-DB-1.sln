@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Test-DB-1", "Test-DB-1\Test-DB-1.sqlproj", "{1DB3860C-94B7-40BB-AB44-9B88654CE0DA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{59341A3C-8ED5-40EA-BCC0-79CD98DDE2A7} = {59341A3C-8ED5-40EA-BCC0-79CD98DDE2A7}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyProjectForNuGet", "DummyProjectForNuGet\DummyProjectForNuGet.csproj", "{59341A3C-8ED5-40EA-BCC0-79CD98DDE2A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +22,10 @@ Global
 		{1DB3860C-94B7-40BB-AB44-9B88654CE0DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DB3860C-94B7-40BB-AB44-9B88654CE0DA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1DB3860C-94B7-40BB-AB44-9B88654CE0DA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{59341A3C-8ED5-40EA-BCC0-79CD98DDE2A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59341A3C-8ED5-40EA-BCC0-79CD98DDE2A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59341A3C-8ED5-40EA-BCC0-79CD98DDE2A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59341A3C-8ED5-40EA-BCC0-79CD98DDE2A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

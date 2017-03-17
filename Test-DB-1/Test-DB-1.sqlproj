@@ -68,24 +68,31 @@
     <PreDeploy Include="Pre-Deploy Scripts\EnableCLRSupport.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Deploy Settings\Remote.2016.publish.xml" />
     <None Include="DeployScript.sql" />
+    <None Include="Dockerfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include=".dockerignore">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="start.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="BigInteger">
-      <HintPath>..\..\BigInteger\BigInteger\bin\Release\BigInteger.dll</HintPath>
-      <IsModelAware>True</IsModelAware>
-      <SqlPermissionSet>SAFE</SqlPermissionSet>
-    </Reference>
-    <Reference Include="PaillierExt.Homomorphism">
-      <HintPath>..\..\PaillierExt\PaillierExt.Homomorphism\bin\Release\PaillierExt.Homomorphism.dll</HintPath>
+      <HintPath>..\DummyProjectForNuGet\bin\Release\BigInteger.dll</HintPath>
       <IsModelAware>True</IsModelAware>
     </Reference>
     <Reference Include="ElGamalExt.Homomorphism">
-      <HintPath>..\..\ElGamalExt\ElGamalExt.Homomorphism\bin\Release\ElGamalExt.Homomorphism.dll</HintPath>
+      <HintPath>..\DummyProjectForNuGet\bin\Release\ElGamalExt.Homomorphism.dll</HintPath>
+      <IsModelAware>True</IsModelAware>
+    </Reference>
+    <Reference Include="PaillierExt.Homomorphism">
+      <HintPath>..\DummyProjectForNuGet\bin\Release\PaillierExt.Homomorphism.dll</HintPath>
       <IsModelAware>True</IsModelAware>
     </Reference>
   </ItemGroup>
