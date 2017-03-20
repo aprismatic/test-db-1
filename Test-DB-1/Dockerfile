@@ -31,4 +31,4 @@ RUN   Start-Service MSSQLSERVER ; \
       rm *.dacpac ; \
       rm *.dll
 
-ENTRYPOINT start.ps1
+ENTRYPOINT ["powershell", "-file C:/start.ps1"]
